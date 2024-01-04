@@ -29,13 +29,13 @@ public class TypeVehicleTest
     public void Vehicle_Type_MustBe_MotorcycleForOption1()
     {
         // Arrange
-        Veiculo vehicle = new();
-
-        // Act
-        vehicle.Tipo = (TipoVeiculo)1;
+        Veiculo vehicle = new()
+        {
+            // Act
+            Tipo = (TipoVeiculo)1
+        };
 
         // Assert
         Assert.Equal(TipoVeiculo.Motocicleta, vehicle.Tipo);
-
     }
 }
