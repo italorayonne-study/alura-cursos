@@ -36,7 +36,7 @@ namespace Alura.Estacionamento.Modelos
         {
             veiculo.HoraEntrada = DateTime.Now;
             veiculo.Ticket = this.GerarTicket(veiculo);
-            this.Veiculos.Add(veiculo);            
+            Veiculos.Add(veiculo);            
         }
 
         public string RegistrarSaidaVeiculo(String placa)
