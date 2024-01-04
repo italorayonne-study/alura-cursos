@@ -1,0 +1,13 @@
+
+version: '3.4'
+
+services:
+  aluraestacionamento:
+    image: aluraestacionamento
+    build:
+      context: .
+      dockerfile: Alura.Estacionamento/Dockerfile
+      args:
+        - configuration=Debug
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
