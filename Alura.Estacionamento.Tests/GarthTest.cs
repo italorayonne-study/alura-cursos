@@ -5,7 +5,7 @@ namespace Alura.Estacionamento.Tests;
 
 public class GarthTest
 {
-    private readonly Patio? _garth;
+    private readonly Patio? _garth = new();
     private readonly Veiculo _vehicle = new()
     {
         Proprietario = "Italo Rayone",
