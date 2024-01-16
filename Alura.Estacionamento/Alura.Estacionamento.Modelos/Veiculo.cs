@@ -10,7 +10,7 @@ namespace Alura.Estacionamento.Modelos
         //Campos
         private string _ticket;
         private string _placa;
-        private string _proprietario;        
+        private string _proprietario;
         private TipoVeiculo _tipo;
 
         //Propriedades
@@ -62,9 +62,9 @@ namespace Alura.Estacionamento.Modelos
         /// Framework, entre outros benefícios.
         /// </summary>
         public string Cor { get; set; }
-        public double Largura { get; set; }    
+        public double Largura { get; set; }
         public double VelocidadeAtual { get; set; }
-        public string Modelo { get; set; }        
+        public string Modelo { get; set; }
         public string Proprietario
         {
             get
@@ -108,12 +108,12 @@ namespace Alura.Estacionamento.Modelos
 
         public override string ToString()
         {
-            return  $"Ficha do Veículo:\n " +
+            return $"Ficha do Veículo:\n " +
                     $"Tipo do Veículo: {this.Tipo.ToString()}\n " +
                     $"Proprietário: {this.Proprietario}\n" +
                     $"Modelo: {this.Modelo}\n" +
                     $"Cor: {this.Cor}\n" +
-                    $"Placa: {this.Placa}\n";            
+                    $"Placa: {this.Placa}\n";
 
         }
 
@@ -125,7 +125,7 @@ namespace Alura.Estacionamento.Modelos
 
         public Veiculo(string proprietario)
         {
-           Proprietario = proprietario;
+            Proprietario = proprietario;
         }
     }
 }

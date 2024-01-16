@@ -10,7 +10,7 @@ namespace Alura.Estacionamento
 
         // Cria uma lista de objetos do tipo veículos, para armazenar
         // os veículos (automovéis e motos) que estão no estacionamento;
-        static Patio estacionamento = new Patio();         
+        static readonly Patio estacionamento = new();
 
         static void Main(string[] args)
         {
@@ -26,7 +26,7 @@ namespace Alura.Estacionamento
             } while (opcao != "5");
         }
 
-        
+
         // Métodos de negócios.
         static void MostrarVeiculosEstacionados()
         {
@@ -44,20 +44,20 @@ namespace Alura.Estacionamento
                 //Console.WriteLine("********Ticket Estacionamento Alura*********");
                 //Console.WriteLine(v.Ticket);
                 //Console.WriteLine("********************************************");
-        }
+            }
             if (estacionamento.Veiculos.Count == 0)
             {
                 Console.WriteLine("Não há veículos estacionados no momento...");
             }
             PressionaTecla();
         }
-        
+
         static void RegistrarSaidaVeiculo()
         {
             Console.Clear();
             Console.WriteLine("Registro de Saída de Veículos");
             Console.Write("Placa: ");
-            string placa = Console.ReadLine();          
+            string placa = Console.ReadLine();
             Console.WriteLine(estacionamento.RegistrarSaidaVeiculo(placa));
             PressionaTecla();
         }
@@ -117,8 +117,10 @@ namespace Alura.Estacionamento
         static void RegistrarEntradaAutomovel()
         {
             Console.WriteLine("Dados do Automovél");
-            Veiculo carro = new Veiculo();
-            carro.Tipo = TipoVeiculo.Automovel;
+            Veiculo carro = new()
+            {
+                Tipo = TipoVeiculo.Automovel
+            };
             //preeencher placa,cor,hora,entrada e proprietário.
             Console.Write("Digite os dados da placa (XXX-9999): ");
             try
@@ -156,14 +158,14 @@ namespace Alura.Estacionamento
             opcao = Console.ReadLine();
             return opcao;
         }
-           
+
         static string MostrarMenu()
         {
             string menu = "Escolha uma opção:\n" +
                             "1 - Registrar Entrada\n" +
                             "2 - Registrar Saída\n" +
                             "3 - Exibir Faturamento\n" +
-                            "4 - Mostrar Veículos Estacionados\n" +                             
+                            "4 - Mostrar Veículos Estacionados\n" +
                             "5 - Sair do Programa \n";
             return menu;
         }
@@ -199,7 +201,5 @@ namespace Alura.Estacionamento
                     break;
             }
         }
-
     }
-    
 }
