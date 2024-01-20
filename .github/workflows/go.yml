@@ -5,9 +5,9 @@ name: Go
 
 on:
   push:
-    branches: [ "github-ci" ]
+    branches: [ "github-cicd" ]
   pull_request:
-    branches: [ "github-ci" ]
+    branches: [ "github-cicd" ]
 
 jobs:
 
